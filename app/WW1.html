@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WHICH WATCHER SITE</title>
+
+    <script src="./components/movie-list.js"></script>
+    <script src="./components/movie-list-item.js"></script>
+    <script src="./components/movie-detail.js"></script>
+    <script src="./components/home-page.js"></script>
+    <script src="./components/series-page.js"></script>
+    <script src='../node_modules/vue/dist/vue.js'></script>
+    <script src='../node_modules/vue-router/dist/vue-router.js'></script>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #searchInput {
+            width: 300px;
+            height: 40px;
+        }
+        .sidebar {
+            margin-bottom: 2rem;
+        }
+        .movie .year {
+            float: right;
+        }
+        .movie .name {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .movie .description {
+            margin-bottom: 2rem;
+        }
+        .container {
+            max-width: 100%;
+        }
+        .sidebar {
+            margin-bottom: 2rem;
+        }
+        .movie {
+            margin: 10px;
+            padding: 10px;
+            border: solid 1px black;
+            border-radius: 10px;
+            min-height: 150px;
+        }
+        .el-img {
+            max-height: 100px;
+        }
+        .el-year {
+            clear:both;
+        }
+        .detail {
+            margin: 10px;
+            padding: 10px;
+            border: solid 1px black;
+            border-radius: 10px;
+            min-height: 150px;
+        }
+        .detail .back {
+            width: 50px;
+            height: 50px;
+        } 
+        .detail .img {
+            float: left;
+            border: 1px solid black;
+            margin-right: 3em;
+            margin-bottom: 2em;
+            background-color: white;
+            padding: 2em;
+            height: 400px;
+            width: 400px;
+        }
+        .detail .year {
+            clear:both;
+        }
+        .detail ul.movie-thumbs {
+            margin: 0;
+            list-style: none;
+        }
+        .detail ul.movie-thumbs li {
+            border: 1px solid black;
+            display: inline-block;
+            margin: 1em;
+            background-color: white;
+        }
+        .detail ul.movie-thumbs img {
+            height: 100px;
+            width: 100px;
+            padding: 1em;
+        }
+        .detail ul.specs {
+            clear: both;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .detail ul.specs > li{
+            display: inline-block;
+            width: 200px;
+            vertical-align: top;
+        }
+        .detail ul.specs > li > span{
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .detail ul.specs dt {
+            font-weight: bold;
+        }
+
+        .detail h1 {
+            border-bottom: 1px solid gray;
+        }
+        .form-check, .form-group {
+            width: 100%;
+            margin-top: 10px;
+            margin-left : 0%;
+            margin-right : 0%;
+        }
+        .fa-user, .fa-sign-in{
+            font-size: 40px;
+            margin-left: 10px;
+        }
+        .fa-home{
+            font-size: 40px;
+            margin-left: 40px;
+        }
+        #filmsPage, #seriesPage {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id='app'>
+            <router-view></router-view>
+        </div>
+    </div>
+
+    <script>
+        Vue.component('movie-list', VueMovies.movieList);
+        Vue.component('movie-list-item', VueMovies.movieListItem);
+        Vue.component('movie-detail', VueMovies.movieDetail);
+        Vue.component('home-page', VueMovies.homePage);
+        Vue.component('series-page', VueMovies.seriesPage);
+
+        const routes = [
+            { path: '/', component: VueMovies.movieList },
+            { path: '/movie/:id', component: VueMovies.movieDetail},
+            { path: '/home', component: VueMovies.homePage},
+            { path: '/series', component: VueMovies.seriesPage},
+        ]
+
+        const router = new VueRouter({
+             routes
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {},
+            router,
+        })
+    </script>
+</body>
+
+</html>

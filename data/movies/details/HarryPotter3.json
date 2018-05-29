@@ -1,0 +1,13 @@
+{
+  "description" : "Sirius Black, un dangereux sorcier criminel, s'échappe de la sombre prison d'Azkaban avec un seul et unique but : retrouver Harry Potter, en troisième année à l'école de Poudlard. Selon la légende, Black aurait jadis livré les parents du jeune sorcier à leur assassin, Lord Voldemort, et serait maintenant déterminé à tuer Harry...",
+  "id": "HarryPotter3",
+  "img": "/img/HarryPotter3.jpg",
+  "name": "Harry Potter 3 - Le prisonnier d'Azkaban",
+  "year": 2004,
+  "duree": "2h20",
+  "age" : "10 ans",
+  "genre" : "Western",
+  "salle" : "Non",
+  "plateformeDiffusion" : "Itunes",
+  "note" : "1"
+}

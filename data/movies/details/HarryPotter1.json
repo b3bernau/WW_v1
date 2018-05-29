@@ -1,0 +1,13 @@
+{
+  "description" : "Harry Potter, un jeune orphelin, est élevé par son oncle Vernon et sa tante Pétunia qui le détestent. Alors qu'il était haut comme trois pommes, ces derniers lui ont raconté que ses parents étaient morts dans un accident de voiture. Le jour de son onzième anniversaire, Harry reçoit la visite inattendue d'un homme gigantesque se nommant Rubeus Hagrid. Celui-ci lui révèle qu'il est en fait le fils de deux puissants magiciens et qu'il possède lui aussi d'extraordinaires pouvoirs. C'est avec joie que le garçon accepte de suivre des cours à Poudlard, la célèbre école de sorcellerie. Il a enfin la chance de se faire des amis. Blâmé par le professeur Severus Rogue qui lui enseigne les potions et protégé par Albus Dumbledore, le directeur de l'établissement, Harry va tenter d'élucider le mystère de la pierre philosophale.",
+  "id": "HarryPotter1",
+  "img": "/img/HarryPotter1.jpg",
+  "name": "Harry Potter 1 - A l'école des sorciers",
+  "year": 2001,
+  "duree": "2h32",
+  "age" : "6 ans",
+  "genre" : "Action",
+  "salle" : "Oui",
+  "plateformeDiffusion" : "Netflix",
+  "note" : "2"
+}
